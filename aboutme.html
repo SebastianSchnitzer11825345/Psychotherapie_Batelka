@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Über mich | Katharina Batelka</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body class="bg-green-50 text-green-900 font-sans pt-20" style="font-family: Georgia, serif;">
+
+<!-- NAVIGATION -->
+<div id="navbar"></div>
+
+<script>
+  fetch("navbar.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar").innerHTML = data;
+
+      const btn = document.getElementById("menuBtn");
+      const menu = document.getElementById("mobileMenu");
+
+      if (btn) {
+        btn.addEventListener("click", () => {
+          menu.classList.toggle("hidden");
+        });
+      }
+    });
+</script>
+
+<!-- HERO -->
+<section class="py-20 px-6 md:px-20 fade-in bg-gradient-to-br from-[#edf6ee] to-[#d7eadf]">
+
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+
+    <!-- PHOTO -->
+    <div>
+      <div class="aspect-[4/5] bg-white rounded-3xl border border-green-100 shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+
+
+        <img
+          src="img/aboutme/aboutme_front.jpg"
+          alt="Katharina Batelka"
+          class="w-full h-full object-cover"
+        >
+
+      </div>
+    </div>
+
+    <!-- INTRO -->
+    <div>
+
+      <p class="uppercase tracking-[0.2em] text-sm font-semibold text-yellow-700 mb-3">
+        Über mich
+      </p>
+
+      <h1 class="text-4xl md:text-5xl font-light text-green-900 mb-8">
+        Schön, dass Sie hier sind.
+      </h1>
+
+      <div class="space-y-5 text-green-700 leading-relaxed">
+
+        <p>
+          Mein Name ist <strong>Katharina Batelka</strong>, ich bin als
+          Psychotherapeutin in Ausbildung unter Supervision in freier Praxis
+          in Krems an der Donau tätig – und ein Mensch, dem die Begegnung mit
+          anderen Menschen und deren Gedanken, Gefühle und Geschichten schon
+          immer wichtig war.
+        </p>
+
+        <p>
+          1997 in der wunderschönen Wachau in Niederösterreich geboren,
+          führte mich mein erster beruflicher Weg in den medizinischen Bereich.
+          Als Zahnarztassistentin konnte ich umfangreiche Erfahrungen im Umgang
+          mit Menschen sammeln und lernen, wie wichtig ein einfühlsamer,
+          respektvoller und professioneller Umgang ist.
+        </p>
+
+        <p>
+          Während meiner berufsbegleitenden Matura lag mein Schwerpunkt auf
+          den Fachbereichen Biologie und Psychologie. Dadurch wurde mein
+          Interesse an der Arbeit mit und für Menschen weiter vertieft.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- WERDEGANG -->
+<section class="py-20 px-6 md:px-20 fade-in">
+
+  <div class="max-w-5xl mx-auto">
+
+    <div>
+
+      <h2 class="text-3xl font-light text-green-900 mb-8">
+        Mein Weg zur Psychotherapie
+      </h2>
+
+      <div class="space-y-6 text-green-700 leading-relaxed">
+
+        <p>
+          2020 begann ich die Ausbildung zur Psychotherapeutin – aus dem tiefen
+          Wunsch heraus, Menschen nicht nur im medizinischen Kontext, sondern
+          auch in ihren seelischen Herausforderungen professionell begleiten
+          zu können.
+        </p>
+
+        <p>
+          Bereits zu Beginn der Ausbildung wurde mir bewusst, dass ich mich
+          im weiteren Verlauf auf den humanistischen Cluster fokussieren
+          möchte, da ich mich in diesem Zugang fachlich wie persönlich
+          besonders angekommen fühle.
+        </p>
+
+        <p>
+          Deshalb habe ich mich rasch dazu entschieden, den
+          personzentrierten Ansatz nach Carl Rogers weiterzuverfolgen.
+        </p>
+
+        <p>
+          Seit 2023 befinde ich mich im Fachspezifikum für
+          personzentrierte Psychotherapie am Institut APG•IPS.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- MEIN ANSATZ -->
+<section class="py-20 px-6 md:px-20 fade-in bg-gradient-to-br from-[#edf6ee] to-[#d7eadf]">
+
+  <div class="max-w-6xl mx-auto">
+
+    <div class="text-center mb-14">
+
+      <p class="uppercase tracking-[0.2em] text-sm font-semibold text-yellow-700 mb-3">
+        Personzentrierte Haltung
+      </p>
+
+      <h2 class="text-4xl font-light text-green-900">
+        Mein Ansatz
+      </h2>
+
+      <p class="max-w-3xl mx-auto mt-6 text-green-700 leading-relaxed">
+        Ich arbeite nach dem personzentrierten Ansatz nach Carl Rogers –
+        getragen von Echtheit, Empathie und Wertschätzung.
+        Mir ist wichtig, Menschen in ihrer Individualität wahrzunehmen
+        und einen Raum zu schaffen, in dem alles Platz haben darf,
+        was gerade bewegt.
+      </p>
+
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <div class="bg-white p-6 rounded-2xl border border-green-100 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-center">
+        <div class="text-3xl mb-3">⏳</div>
+        <h3 class="font-semibold mb-3 text-green-800">Zeit & Raum</h3>
+        <p class="text-sm text-green-700">
+          Zeit und Raum für Gedanken, Gefühle und persönliche Themen.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl border border-green-100 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-center">
+        <div class="text-3xl mb-3">🌿</div>
+        <h3 class="font-semibold mb-3 text-green-800">So sein dürfen</h3>
+        <p class="text-sm text-green-700">
+          Ein Ort, an dem Menschen einfach so sein dürfen, wie sie gerade sind.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl border border-green-100 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-center">
+        <div class="text-3xl mb-3">💛</div>
+        <h3 class="font-semibold mb-3 text-green-800">Wertschätzung</h3>
+        <p class="text-sm text-green-700">
+          Verständnis, Akzeptanz und Ernstgenommenwerden fördern.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl border border-green-100 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-center">
+        <div class="text-3xl mb-3">🤝</div>
+        <h3 class="font-semibold mb-3 text-green-800">Empathie</h3>
+        <p class="text-sm text-green-700">
+          Menschen offen, empathisch und ohne Bewertung begegnen.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl border border-green-100 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-center">
+        <div class="text-3xl mb-3">🕯️</div>
+        <h3 class="font-semibold mb-3 text-green-800">Schwieriges anschauen</h3>
+        <p class="text-sm text-green-700">
+          Auch belastende Gefühle und schwierige Themen dürfen Platz haben.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl border border-green-100 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-center">
+        <div class="text-3xl mb-3">✨</div>
+        <h3 class="font-semibold mb-3 text-green-800">Ganzheitlicher Blick</h3>
+        <p class="text-sm text-green-700">
+          Den Menschen nicht auf Symptome reduzieren, sondern als Ganzes sehen.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- AUSBILDUNG -->
+<section class="py-20 px-6 md:px-20 fade-in">
+
+  <div class="max-w-5xl mx-auto">
+
+    <div class="text-center mb-14">
+      <h2 class="text-4xl font-light text-green-900">
+        Meine Ausbildung
+      </h2>
+    </div>
+
+    <div class="space-y-8">
+
+      <div class="bg-white rounded-3xl p-8 border border-green-100 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="text-3xl">🎓</span>
+          <div class="text-yellow-700 font-semibold">
+            04/2023 – aktuell
+          </div>
+        </div>
+
+        <h3 class="text-xl font-semibold text-green-800">
+          APG•IPS – Institut für personzentrierte Studien
+        </h3>
+
+        <p class="mt-2 text-green-700">
+          Psychotherapeutisches Fachspezifikum
+        </p>
+
+        <ul class="list-disc pl-5 mt-4 text-green-700">
+          <li>
+            Mehrmonatiges Praktikum auf der klinischen Abteilung für
+            Psychiatrie und psychotherapeutische Medizin in Tulln
+          </li>
+        </ul>
+      </div>
+
+      <div class="bg-white rounded-3xl p-8 border border-green-100 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="text-3xl">📚</span>
+          <div class="text-yellow-700 font-semibold">
+            03/2023 – aktuell
+          </div>
+        </div>
+
+        <h3 class="text-xl font-semibold text-green-800">
+          Universität Wien
+        </h3>
+
+        <p class="mt-2 text-green-700">
+          Universitätslehrgang Personzentrierte Psychotherapie
+        </p>
+
+        <p class="mt-4 text-green-700">
+          Master-Thesis: „Krebs und Psyche: Eine systematische
+          Literaturübersicht der Belastungen onkologischer Patient*innen
+          und mögliche Perspektiven für Interventionen aus
+          personzentrierter Sicht“
+        </p>
+      </div>
+
+      <div class="bg-white rounded-3xl p-8 border border-green-100 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="text-3xl">🏛️</span>
+          <div class="text-yellow-700 font-semibold">
+            09/2020 – 02/2022
+          </div>
+        </div>
+
+        <h3 class="text-xl font-semibold text-green-800">
+          Donau-Universität Krems
+        </h3>
+
+        <p class="mt-2 text-green-700">
+          Psychotherapeutisches Propädeutikum
+        </p>
+
+        <ul class="list-disc pl-5 mt-4 text-green-700 space-y-2">
+          <li>
+            Praktikum in einer Fachpraxis für Urologie mit Schwerpunkt
+            auf die Behandlung und Begleitung onkologischer Patient*innen
+          </li>
+
+          <li>
+            Mentoring Programm „Big Brother Big Sister“
+          </li>
+        </ul>
+      </div>
+
+      <div class="bg-white rounded-3xl p-8 border border-green-100 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="text-3xl">📝</span>
+          <div class="text-yellow-700 font-semibold">
+            09/2017 – 02/2020
+          </div>
+        </div>
+
+        <h3 class="text-xl font-semibold text-green-800">
+          Berufsreifeprüfung
+        </h3>
+
+        <p class="mt-2 text-green-700">
+          Fachbereich „Gesundheit und Soziales“
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- INFORMATION -->
+<section class="py-20 px-6 md:px-20 fade-in bg-gradient-to-br from-[#edf6ee] to-[#d7eadf]">
+  <div class="max-w-4xl mx-auto">
+    <div class="bg-white rounded-3xl p-10 shadow-md border border-green-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+      <h2 class="text-3xl font-light text-green-900 mb-8">Aktuelle Information </h2>
+      <div class="space-y-4 text-green-700 leading-relaxed">
+      <p>✓ Ich befinde mich im letzten Teil meiner Ausbildung.</p>
+      <p> ✓ Meine Arbeit wird regelmäßig von erfahrenen Psychotherapeut:innen supervidiert. </p>
+      <p> ✓ Dies stellt eine zusätzliche Qualitätssicherung dar. </p>
+      <p> ✓ Derzeit ist kein Kostenzuschuss durch die Krankenkasse möglich – die Einheiten sind privat zu bezahlen. </p>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-10 text-center text-sm text-green-600 bg-green-50">
+
+  <div class="text-green-600">
+    MIT Licensed © 2026 Sebastian Schnitzer
+  </div>
+
+  <div class="mt-2">
+    <a href="impressum.html">Impressum</a> |
+    <a href="datenschutz.html">Datenschutz</a>
+  </div>
+
+</footer>
+
+<!-- SCROLL ANIMATION -->
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.fade-in').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
+
