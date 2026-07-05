@@ -35,7 +35,19 @@
         });
       }
     });
-  console.log();
+
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.fade-in').forEach(el => {
+    observer.observe(el);
+  });
 </script>
 <body class="bg-green-50 text-green-900 font-sans pt-20" style="font-family: Georgia, serif;">
 
@@ -574,21 +586,6 @@
 
 
 </footer>
-
-<!-- JS: Scroll Animation -->
-<script>
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.2 });
-
-  document.querySelectorAll('.fade-in').forEach(el => {
-    observer.observe(el);
-  });
-</script>
 
 
 </body>
